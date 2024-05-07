@@ -2,6 +2,7 @@ import os
 from time import *
 from random import *
 
+
 def clear_console():
     if os.name == 'posix':
         os.system('clear')
@@ -212,17 +213,59 @@ while Preg_inicial != '6':
                 mal()
                 log2 = input('Password: ')
             clear_console()
-            print('Bienvenido al modo admin, que desea hacer?\n1: Limpiar consola\n2: Cerrar')
+            print('Bienvenido al modo admin, que desea hacer?\n1: Limpiar consola\n2: Codigo Fuente\n3: Salir del programa (forzado)')
             respt = int(input('Respuesta: '))
             if respt == 1:
                 clear_console()
                 Preg_inicial = input("De que lenguaje te gustaria el test?:\n1: Java\n2: Html, Css, JS.\n3: Python\n4: C++\n5: Otros\n6: Salir\nRespuesta: ")
             elif respt == 2:
                 clear_console()
+                print('Visita https://github.com/Zalkein/Test-Programming')
+                input('Presiona enter para volver: ')
+                clear_console()
+                Preg_inicial = input("De que lenguaje te gustaria el test?:\n1: Java\n2: Html, Css, JS.\n3: Python\n4: C++\n5: Otros\n6: Salir\nRespuesta: ")
+
+
+            elif respt == 3: 
+                Terminator()
+                break
                 exit()
+    elif Preg_inicial == 'AdminModeOnly':
+            clear_console()
+            admin = 'Zalk'
+            passwo = 'zalko'
+            log1 = input('Usuario: ')
+            while log1 != admin:
+                clear_console()
+                mal()
+                log1 = input('Usuario: ')
+            log2 = input('Password: ')
+            while log2 != passwo:
+                clear_console()
+                mal()
+                log2 = input('Password: ')
+            clear_console()
+            print('Bienvenido al modo admin, que desea hacer?\n1: Limpiar consola\n2: Codigo Fuente\n3: Salir del programa (forzado)')
+            respt = int(input('Respuesta: '))
+            if respt == 1:
+                clear_console()
+                Preg_inicial = input("De que lenguaje te gustaria el test?:\n1: Java\n2: Html, Css, JS.\n3: Python\n4: C++\n5: Otros\n6: Salir\nRespuesta: ")
+            elif respt == 2:
+                clear_console()
+                print('Visita https://github.com/Zalkein/Test-Programming')
+                input('Presiona enter para volver: ')
+                clear_console()
+                Preg_inicial = input("De que lenguaje te gustaria el test?:\n1: Java\n2: Html, Css, JS.\n3: Python\n4: C++\n5: Otros\n6: Salir\nRespuesta: ")
+
+            elif respt == 3: 
+                    Terminator()
+                    break
+                    exit()
+        
     else:
         clear_console()
         print('no te entiendo tio!')
         Preg_inicial = input("De que lenguaje te gustaria el test?:\n1: Java\n2: Html, Css, JS.\n3: Python\n4: C++\n5: Otros\n6: Salir\nRespuesta: ")
 clear_console()
 exit()
+
